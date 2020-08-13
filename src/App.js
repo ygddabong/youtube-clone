@@ -1,11 +1,16 @@
 import React from 'react';
+import Header from "./Header"
 import './App.css';
 
 function App() {
   return (
     // BEM class naming convertion
     <div className="app">
-      <h1>Hello Yonggyu !! let's bulid a youtube clone 🚀</h1>
+      <Header />
+      
+      {/* Header */}
+      {/* Sidebar */}
+      {/* RecommendedVideo */}
     </div>
   );
 }
