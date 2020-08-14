@@ -3,6 +3,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    /* Top Positioning */
+    z-index: 2147483647;
+    background-color: white;
 }
 
 .header__logo {
