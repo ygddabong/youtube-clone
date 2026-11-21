@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 import "./Header.css";
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import VideoCallIcon from '@material-ui/icons/VideoCall';
-import AppsIcon from '@material-ui/icons/Apps';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import Avatar from '@material-ui/core/Avatar';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import VideoCallIcon from '@mui/icons-material/VideoCall';
+import AppsIcon from '@mui/icons-material/Apps';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import Avatar from '@mui/material/Avatar';
 import { Link } from 'react-router-dom';
 
 
@@ -20,8 +20,8 @@ function Header() {
         <Link to="/">
           <img
             className="header__logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg"
-            alt=""
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+            alt="YouTube"
           />
         </Link>
       </div>
@@ -33,7 +33,7 @@ function Header() {
           placeholder="Search"
           type="text"
         />
-        <Link to={`/search/${inputSearch}`}>
+        <Link to={inputSearch.trim() ? `/search/${encodeURIComponent(inputSearch.trim())}` : "/"}>
           <SearchIcon className="header__inputButton" />
         </Link>
       </div>
@@ -43,7 +43,7 @@ function Header() {
         <AppsIcon className="header__icon" />
         <NotificationsIcon className="header__icon" />
         <Avatar
-          alt="Remy Sharp"
+          alt="Profile"
           src="https://avatars2.githubusercontent.com/u/39237004?s=400&u=0970cd1e132aaf1579067bb534ba763f2d79e9db&v=4"
         />
       </div>
